@@ -1,0 +1,84 @@
+@keyframes roll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes tilt{
+    from{
+        transform: rotate(45deg);
+    }
+    to{
+        transition: all 2s ease-in-out;
+
+    }
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(45deg);
+    }
+    60%{
+        transform: rotate(90deg);
+    }
+    80%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(3600deg);
+    }
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    margin: 80px;
+    display: grid;
+    
+}
+
+#box{
+    border: 2px purple solid;
+    background-color: purple;
+    height: 200px;
+    width: 200px;
+    &:hover{
+        animation: spin 5s ease-in 5;
+    }
+}
+
+#circle{
+    height: 300px;
+    width: 300px;
+    background-color: aqua;
+    border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    bottom: 30px;
+    &:hover{
+        animation: roll 10s ease-in-out 5;
+    }
+}
+
+#rectangle{
+    height: 550px;
+    width:30px;
+    border-radius: 45%;
+    background-color: orangered;
+    position: absolute;
+    right: 350px;
+    &:hover{
+        animation: tilt 2s ease-in-out 5;
+    }
+}
+

@@ -1,0 +1,113 @@
+@-webkit-keyframes roll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes roll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes tilt {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transition: all 2s ease-in-out;
+  }
+}
+@keyframes tilt {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transition: all 2s ease-in-out;
+  }
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(45deg);
+  }
+  60% {
+    transform: rotate(90deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(45deg);
+  }
+  60% {
+    transform: rotate(90deg);
+  }
+  80% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 80px;
+  display: grid;
+}
+
+#box {
+  border: 2px purple solid;
+  background-color: purple;
+  height: 200px;
+  width: 200px;
+}
+#box:hover {
+  -webkit-animation: spin 5s ease-in 5;
+          animation: spin 5s ease-in 5;
+}
+
+#circle {
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+  border-radius: 50%;
+  position: absolute;
+  left: 100px;
+  bottom: 30px;
+}
+#circle:hover {
+  -webkit-animation: roll 10s ease-in-out 5;
+          animation: roll 10s ease-in-out 5;
+}
+
+#rectangle {
+  height: 550px;
+  width: 30px;
+  border-radius: 45%;
+  background-color: orangered;
+  position: absolute;
+  right: 350px;
+}
+#rectangle:hover {
+  -webkit-animation: tilt 2s ease-in-out 5;
+          animation: tilt 2s ease-in-out 5;
+}/*# sourceMappingURL=styles.css.map */
